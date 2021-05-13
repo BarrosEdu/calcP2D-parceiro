@@ -19,6 +19,11 @@ function calculo() {
 	var inss = 0.11 // 11% INSS
 	var iss = 0.02 // 2% ISS
 
+	totalLiquido = subtotal - ((subtotal*inss) + (subtotal*iss))
+
+	document.meu_form.totalLiquido.value = totalLiquido.toFixed(2);
+
+
 
 
 
