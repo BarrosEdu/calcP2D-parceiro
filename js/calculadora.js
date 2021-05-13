@@ -2,10 +2,14 @@ function calculo() {
 	//passando os valores do campo do form para as variaveis
 	tarifa = Number(document.meu_form.tarifa.value);
 	comissaoFixa = Number(document.meu_form.comissaoFixa.value);
+	comissaoVar = Number(document.meu_form.comissaoVar.value);
+
 	comissaoFixa = Number(comissaoFixa / 100);
+	comissaoVar = Number(comissaoVar / 100);
 
 
-	comissaoBruta =  (tarifa * comissaoFixa); //fazendo a soma
+	comissaoBruta =  ((tarifa * comissaoFixa) + (tarifa*comissaoVar)); //fazendo calculo bruto de comissao
+
 
 	document.meu_form.comissaoBruta.value = comissaoBruta.toFixed(2);
 

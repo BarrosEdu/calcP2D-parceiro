@@ -42,7 +42,6 @@
 				<div class="row">
 					<div>
 						<div id="msg">
-
 						</div>
 						<i class="fas fa-calculator fa-3x" id="calc"></i>
 						<h5>Simulador de comissão Parceiro P2D</h5>
@@ -50,30 +49,36 @@
 						<form name="meu_form" method="post" action="" id="form">
 							<table class="table table-hover">
 								<tr>
-									<td>Valor da venda</td>
+									<td>Valor da venda<p id="descricao">Valor total da venda</p></td>
+									
 									<td><i class="fas fa-pencil-alt" id="color"></i> <input name="tarifa" type="text"
 											id="tarifa" placeholder="Ex.: 1234.50" required="Favor digitar a tarifa">
 									</td>
 								</tr>
 								<tr>
-									<td>Comissao fixa %</td>
+									<td>Comissao fixa %<p id="descricao">Inserir comissao fixa voo ou hotel</p></td>
 									<td><i class="fas fa-pencil-alt" id="color"></i> <input name="comissaoFixa"
-											type="text" id="comissaoFixa" placeholder="Ex.: 10" onBlur="calculo();">
+											type="text" id="comissaoFixa" placeholder="Ex.: 10">
 									</td>
 								</tr>
 								<tr>
-									<td>Comissao Bruta</td>
+									<td>Comissao variavel %<p id="descricao">Inserir comissao variavel (markUp do agente)</p></td>
+									<td><i class="fas fa-equals" id="color"></i> <input value="0" name="comissaoVar"
+											onBlur="calculo();" type="text" id="comissaoVar"></td>
+								</tr>
+								<tr>
+									<td>Comissao Bruta<p id="descricao">Soma das comissoes (Fixa + Variavel)</p></td>
 									<td><i class="fas fa-equals" id="color"></i> <input name="comissaoBruta"
 											onFocus="this.blur()" type="text" id="comissaoBruta"></td>
 								</tr>
-								
+
 								<tr>
-									<td>SubTotal sem ISS/INSS</td>
+									<td>SubTotal sem ISS/INSS<p id="descricao">Comissao bruta descontando taxas( taxa de cartao + Impostos PIS 1,65% e CONFINS 7,60%)</p></td>
 									<td><i class="fas fa-dollar-sign" id="color"></i>&nbsp&nbsp<input name="subtotal"
 											onFocus="this.blur()" type="text" id="subtotal"></td>
 								</tr>
 								<tr>
-									<td>Estimativa liquida a receber</td>
+									<td>Estimativa liquida a receber <p id="descricao">Valor estimado liquido descontado 11% INSS + 2% ISS</p></td>
 									<td><i class="fas fa-dollar-sign" id="color"></i>&nbsp&nbsp<input
 											name="totalLiquido" onFocus="this.blur()" type="text" id="totalLiquido">
 									</td>
