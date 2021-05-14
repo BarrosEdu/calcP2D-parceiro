@@ -65,3 +65,6 @@ section{
 	padding: 0%;
 	color: red;
 }
+select{
+	font-size: 12px;
+}
