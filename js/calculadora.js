@@ -7,8 +7,9 @@ function calculo() {
 	comissaoFixa = Number(comissaoFixa / 100);
 	comissaoVar = Number(comissaoVar / 100);
 
-
-	comissaoBruta =  ((tarifa * comissaoFixa) + (tarifa*comissaoVar)); //fazendo calculo bruto de comissao
+	var markup = (tarifa*comissaoVar);
+	var comissaoPadrao = (comissaoFixa * (tarifa-markup));
+	var comissaoBruta =  (markup + comissaoPadrao); //fazendo calculo bruto de comissao
 
 
 	document.meu_form.comissaoBruta.value = comissaoBruta.toFixed(2);
@@ -26,15 +27,6 @@ function calculo() {
 	totalLiquido = subtotal - ((subtotal*inss) + (subtotal*iss))
 
 	document.meu_form.totalLiquido.value = totalLiquido.toFixed(2);
-
-
-
-
-
-
-
-
-
 
 
 }
