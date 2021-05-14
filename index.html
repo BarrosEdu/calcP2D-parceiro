@@ -49,36 +49,64 @@
 						<form name="meu_form" method="post" action="" id="form">
 							<table class="table table-hover">
 								<tr>
-									<td>Valor da venda<p id="descricao">Valor total da venda</p></td>
-									
+									<td>Valor da venda<p id="descricao">Valor total da venda</p>
+									</td>
+
 									<td><i class="fas fa-pencil-alt" id="color"></i> <input name="tarifa" type="text"
 											id="tarifa" placeholder="Ex.: 1234.50" required="Favor digitar a tarifa">
 									</td>
 								</tr>
 								<tr>
-									<td>Comissao fixa %<p id="descricao">Inserir comissao fixa voo ou hotel</p></td>
-									<td><i class="fas fa-pencil-alt" id="color"></i> <input name="comissaoFixa"
-											type="text" id="comissaoFixa" placeholder="Ex.: 10">
+									<td>Comissao fixa %<p id="descricao">Inserir comissao fixa voo ou hotel</p>
+									</td>
+									<td>
+										<div class="container">
+											<form action="/action_page.php">
+												<div class="form-check-inline">
+													<label class="form-check-label" for="radio1">
+														<input type="radio" class="form-check-input" id="comissaoFixa"
+															name="optradio" value="10" checked>Hotel
+														<i class="fas fa-hotel"></i>
+
+													</label>
+												</div>
+												<div class="form-check-inline">
+													<label class="form-check-label" for="radio2">
+														<input type="radio" class="form-check-input" id="comissaoFixa"
+															name="optradio" value="5">Aereo
+														<i class="fas fa-plane-departure"></i>
+													</label>
+												</div>
+
+											</form>
+										</div>
 									</td>
 								</tr>
 								<tr>
-									<td>Comissao variavel %<p id="descricao">Inserir comissao variavel (markUp do agente)</p></td>
+									<td>Comissao variavel %<p id="descricao">Inserir comissao variavel (mark up do
+											agente)</p>
+									</td>
 									<td><i class="fas fa-equals" id="color"></i> <input value="0" name="comissaoVar"
 											onBlur="calculo();" type="text" id="comissaoVar"></td>
 								</tr>
 								<tr>
-									<td>Comissao Bruta<p id="descricao">Soma das comissoes (Fixa + Variavel)</p></td>
+									<td>Comissao Bruta<p id="descricao">Soma das comissoes (Fixa + Variavel)</p>
+									</td>
 									<td><i class="fas fa-equals" id="color"></i> <input name="comissaoBruta"
 											onFocus="this.blur()" type="text" id="comissaoBruta"></td>
 								</tr>
 
 								<tr>
-									<td>SubTotal sem ISS/INSS<p id="descricao">Comissao bruta descontando taxas( taxa de cartao + Impostos PIS 1,65% e CONFINS 7,60%)</p></td>
+									<td>SubTotal sem ISS/INSS<p id="descricao">Comissao bruta descontando taxas( taxa de
+											cartao + Impostos PIS 1,65% e CONFINS 7,60%)</p>
+									</td>
 									<td><i class="fas fa-dollar-sign" id="color"></i>&nbsp&nbsp<input name="subtotal"
 											onFocus="this.blur()" type="text" id="subtotal"></td>
 								</tr>
 								<tr>
-									<td>Estimativa liquida a receber <p id="descricao">Valor estimado liquido descontado 11% INSS + 2% ISS</p></td>
+									<td>Estimativa liquida a receber <p id="descricao">Valor estimado liquido descontado
+											11% INSS + 2% ISS</p>
+									</td>
 									<td><i class="fas fa-dollar-sign" id="color"></i>&nbsp&nbsp<input
 											name="totalLiquido" onFocus="this.blur()" type="text" id="totalLiquido">
 									</td>
